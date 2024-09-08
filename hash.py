@@ -6,7 +6,7 @@ app = Flask(__name__)
 # Isso aqui define a chave da sessão
 app.config['SECRET_KEY'] = 'testandocripto'
 
-# Lista pra armazenar os dados coletados
+# Lista pra armazenar os dados coletados 
 lista = []
 
 @app.route('/', methods=['POST','GET'])
