@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <h1>Faça seu cadstro aqui!</h1>
+    <form action="{{ url_for('dados') }}" method="post">
+        <p>E-mail:</p>
+        <input type="text" name="f_email">
+        <p>Senha:</p>
+        <input type="text" name="f_senha">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
