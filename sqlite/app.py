@@ -48,5 +48,5 @@ def listar():
     # .fetchall serve pra pegar valores
     # Fecanhdo conexão
     conect.close()
-    # Passsando dicionário como parametro para a página "listar-users.html"
+     # Passsando dicionário como parametro para a página "listar-users.html"
     return render_template('pages/listar-users.html', users=users)
