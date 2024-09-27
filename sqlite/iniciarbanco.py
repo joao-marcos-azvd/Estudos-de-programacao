@@ -2,7 +2,7 @@
 # Tem que rodar no terminal python ( python <nome_do_arquivo> )
 import sqlite3
 
-# Cria uma conexão com o banco e "Cria" o banco database.bd
+# Cria uma conexão com o banco e cria o banco "database.bd"
 conn = sqlite3.connect('database.db')
 
 # Pega o códifo dentro de 'db/flask-sqlite.sql' e executa, criando as tabelas
