@@ -1,5 +1,7 @@
 {% extends 'layout.html' %}
+<!-- Página de criar usuários -->
 
+<!-- Links -->
 {% block navbar %}
 <h2><a href="{{url_for('index')}}">Home</a></h2>
 <h2><a href="{{url_for('create_user')}}">Add Users</a></h2>
@@ -7,6 +9,7 @@
 {% endblock %}
 
 {% block conteudo %}
+<!-- form responsável por cadastrar os usuários -->
 <form action="{{url_for('create_user')}}" method="POST">
     <label for="name">
         Nome
