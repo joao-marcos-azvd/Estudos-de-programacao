@@ -44,7 +44,7 @@ def listar():
     # Obtendo conexão por meio da função "obter_conexao" 
     conect = obter_conexao()
     # Criando um dicionário com os valores do banco
-    users = conect.execute('SELECT nome FROM usuarios').fetchal
+    users = conect.execute('SELECT nome FROM usuarios').fetchal()
     # .fetchall serve pra pegar valores
     # Fecanhdo conexão
     conect.close()
