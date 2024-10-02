@@ -18,6 +18,7 @@ def cadastrar():
         nome = request.form['nome']
         email = request.form['email']
         cpf = request.form['cpf']
+        # Garante que a conexão seja aberta e fechada ao final do uso
         with obter_conexao_bd() as conexao:
             conexao.execute("INSERT INTO funcionarios(nome, email, cpf) VALUES(?, ?, ?)", (nome, email, cpf))
             conexao.commit()
