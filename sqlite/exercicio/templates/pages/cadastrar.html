@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block conteudo %}
+<form action=" {{ url_for('cadastrar') }} " method="post">
+    <input type="text" name="nome" placeholder="Nome">
+    <br>
+    <input type="email" name="email" placeholder="E-mail">
+    <br>
+    <input type="text" name="cpf" placeholder="CPF">
+    <br>
+    <input type="submit" value="Cadastrar">
+</form>
+{% endblock %}
