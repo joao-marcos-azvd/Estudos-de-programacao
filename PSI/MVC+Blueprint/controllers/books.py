@@ -1,4 +1,6 @@
+# Importando do Flask tudo que vai ser usado
 from flask import Flask, render_template, url_for, request, Blueprint, redirect
+# Importando modelos da pasta models
 from models.user import User
 from models.book import Book
 
