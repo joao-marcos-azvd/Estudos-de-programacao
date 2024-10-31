@@ -1,9 +1,11 @@
 # Importando do Flask tudo que vai ser usado
 from flask import Flask, render_template, url_for, request, Blueprint, redirect
-# Importando modelos da pasta models
+# Importando modelos da pasta models,
+# Esse modelos são POO, ou seja, são objetos com funções "prontas"
 from models.user import User
 from models.book import Book
 
+# Instância de Blueprint
 bp = Blueprint('books', __name__, url_prefix='/books')
 
 @bp.route('/')
