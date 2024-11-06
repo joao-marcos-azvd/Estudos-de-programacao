@@ -4,7 +4,7 @@ from flask import render_template, Blueprint, url_for, request, flash, redirect
 from models.user import User
 
 # Instância do Blueprint
-bp = Blueprint('users', __name__, url_prefix='/users')
+bp = Blueprint(name='users', import_name=__name__, url_prefix='/users')
 # Nome, instância, préfixo da url
 
 
