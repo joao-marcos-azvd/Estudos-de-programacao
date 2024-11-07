@@ -1,0 +1,145 @@
+- Comando  (Forma simplificada)
+
+- -Comando (Forma completa)
+
+mkdir (Cria diretório)
+
+mkdir -d (Cria diretórios dentro de um novo diretório, diretório de pai ausente)
+
+rmdir (Deleta diretório vazios)
+
+rmdir -r  (Deleta diretório)
+
+pwd (Mostra a posição do sistema)
+
+whoami (Retorna usuário logado)
+
+echo CAMINHO RELATIVO (Retorna o caminho absoluto)
+
+~ = /home/student
+
+cd - (Retorna para o diretório anterior)
+
+touch CAMINHO/arquivo (Cria arquivos de texto)
+
+Caminho relativo (Depende de onde se está no terminal)
+
+Caminho absoluto (Indica o caminho absoluto, não depende de nada, pois é o caminho exato.)
+
+rm CAMINHO (Deleta arquivos)
+
+rm -r CAMINHO (O. Recursiva: Apaga tudo)
+
+cat ARQUIVO (Exibe o conteudo de um arquivo)
+
+nano ARQUIVO (Editor de texto)
+
+cat > ARQUIVO (Sobrescreve textos de arquivos)
+
+cat >> ARQUIVO (Adiciona texto)
+
+man COMANDO (Mostra todas a opções do comando)
+
+-h ou --help (Serve pra mostra pra que serve o comando)
+
+find CAMINHO (Serve pra buscar arquivos do sistema)
+
+lacate ARQUIVO (Comando de busca)
+
+file /ARQUIVO (Indica o tipo do dado)
+
+sudo (Serve como uma permição do usuário hoot)
+
+su (Entra no hoot)
+
+O hoot é o super usuário do sistema
+
+Comando (É a ação)
+
+Opções para ajustar (Seguida por - ou --)
+
+Argumento (Onde o comando vai agir)
+
+passwd (Serve pra mudar a senha)
+
+less ARQUIVO (Exibe páginas de arquivos)
+
+wc OPÇÃ0[-l, -w ou -c número dado de linhas, palavras ou caracteres, respectivamente.] ARGUMENTO (Conta linhas, palavras ou caracteres de um documento)
+
+history (Exibe o histórico de comando)
+
+!Num (Coloca o comando que tem esse número no histórico)
+
+head OPÇÃO COMANDO (Exibem o início um arquivo. Por padrão, esses comandos exibem 10 linhas do arquivo, mas ambos têm uma -nopção para especificar um número diferente de linhas.)
+
+tail OPÇÃO COMANDO (Exibem o fim um arquivo. Por padrão, esses comandos exibem 10 linhas do arquivo, mas ambos têm uma -nopção para especificar um número diferente de linhas.)
+
+; (Serve pra colocar vários comandos em uma mesma linha)
+
+cp (Copia arquivos) "Por padrão não copia diretórios, mas pode fazer isso com opções"
+
+mv NOME_ANTIGO NOME_NOVO[OU CAMINHO] (Serve para renomear arquivos)
+
+mv -v ARQUIVO ARGUMENTO (Move arquivos de um lugar para outro)
+
+mv ARQUIVO ARGUMENTO (Move arquivos de um lugar para outro)
+
+ln CAMINHO_ORIGINAL CAMINHO2 (Adiciona um novo caminho físico para os arquivos e mantem o original válido) "Só serve para arquivos e não para diretórios. Só pode ser feito se ambos estiverem no mesmo diretório pai."
+
+* Para determinar se dois arquivos estão relacionados, use a opção -il do comando ls para listar o número de inode de cada arquivo. Mesmo com o arquivo original deletado o link físico ainda continua com as informações.
+
+ln -s CAMINHO_ORIGINAL CAMINHO_SIMBÓLICO (Adiciona um novo caminho smbólico para os arquivos e mantem o original válido) "Serve para diretórios e arquivos. Pode ser feito em qualquer canto do sistema."
+
+* Se o link original for deletado todas as informações somem.
+
+* Se você quiser atualizar o diretório de trabalho atual usando o nome do diretório real, poderá usar a opção -P do comando cd. 
+
+df (Listas os diretórios que estão em sistemas de arquivos diferentes.)
+
+ls X* (Lista todos os arquivos que começam com tal letra.)
+
+ls *X* (Lista todos os arquivos que contem com tal letra.)
+
+ls [XZ] (Lista qualquer elemento que tenha tais letras.)
+
+ls [XZ]* (Lista qualquer elemento que comece com tais letras.)
+
+ls ?? (Lista todos os arquivos que tenham o mesmo número de letras iguais ao número de ?)
+
+Expanção de chave = Tem como objetivo criara vários arquivos de uma única vez. (CAP. 3 Red Hat)
+
+VARIAVEL=VALOR (Cria uma variável)
+
+echo ${VARIAVEL} (Mostra o valor da variável)
+
+echo TEXTO $(COMANDO) (Exibe uma mensagem na tela com a execução do comando entre (), que é ligado a isso por meio do "$")
+
+\ (É uma característica de escape no shell Bash)
+
+' ' (Interpreta tudo como texto) MELHOR
+
+" " (Interpreta algumas partes como texto) 
+
+Git pull (atualiza com base no repositório do github)
+
+OBS ❗: As coisas como opção e argumento devem ser usadas com " - "
+
+useradd nome_usario (Adiciona um novo usuário)
+
+userdell nome_usuario (Remove um usuário)
+
+usermod -opção (Modifica dados dos usuário)
+
+/etc/passwd (Caminho do diretório com informações dos usuários)
+
+/etc/group (Guarda informações de grupos de usuários)
+
+passwd nome_usuarios (Define ou modifica a senha do usuário)
+
+
+
+
+
+
+
+ 
