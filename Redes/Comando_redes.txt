@@ -126,7 +126,7 @@ OBS ❗: As coisas como opção e argumento devem ser usadas com " - "
 
 useradd nome_usario (Adiciona um novo usuário)
 
-userdell nome_usuario (Remove um usuário)
+userdel -r nome_usuario (Remove um usuário de forma recursiva {Não deixa nada dele})
 
 usermod -opção (Modifica dados dos usuário)
 
@@ -136,10 +136,8 @@ usermod -opção (Modifica dados dos usuário)
 
 passwd nome_usuarios (Define ou modifica a senha do usuário)
 
+sudo -i (Altera para o usuário root na RedHat)
 
+tail /etc/passwd (Exibe todos os usuários do sistema)
 
-
-
-
-
- 
+ls -l /home (Mostra todos os diretórios pessoais de todos os usuários para o root)
