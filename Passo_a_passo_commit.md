@@ -1,4 +1,4 @@
-# Como dar commit via termianl git?cls
+# Como dar commit via termianl git?
     git init
 ---
     git status *OPICIONAL*
