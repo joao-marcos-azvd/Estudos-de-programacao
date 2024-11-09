@@ -10,3 +10,6 @@
     git commit -m "Nome do commit"
 ---
     git push -u origin main
+---
+# Como dar pull via terminal git?
+    git pull
