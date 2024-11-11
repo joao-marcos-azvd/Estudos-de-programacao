@@ -1,11 +1,15 @@
 # Como dar commit via termianl git?
     git init
 ---
-    git status *OPICIONAL*
+*OPICIONAL*
+
+    git status 
 ---
     git add .
 ---
-    git status *OPICIONAL*
+*Opicional*
+
+    git status
 ---
     git commit -m "Nome do commit"
 ---
