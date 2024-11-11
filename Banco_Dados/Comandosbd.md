@@ -124,3 +124,5 @@
 - FAZ UM FILTRO NA TABELA APOS O AGRUPAMENTO:
 
       select sum(valor) from tb_vendas where cli_nome like "a%" group by cli_nome having sum(valor) > 15;
+
+- LINK PARA VISUALIZAR FUNÇÕES: https://www.w3schools.com/sql/sql_ref_mysql.asp
