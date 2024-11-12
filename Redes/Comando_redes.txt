@@ -141,3 +141,17 @@ sudo -i (Altera para o usuário root na RedHat)
 tail /etc/passwd (Exibe todos os usuários do sistema)
 
 ls -l /home (Mostra todos os diretórios pessoais de todos os usuários para o root)
+
+groupadd ARGUMENTO GID NOME_GRUPO (Cria um novo grupo)
+[EX: groupadd -g 10000 group01]
+
+groupmod -n NOME_NOVO NOME_ANTIGO (Altera o nome do grupo)
+[EX: groupmod -n group0022 group02]
+
+
+groupmod -g NOVA_GID NOME_GRUPO (Altera a GID de um grupo)
+[EX: groupmod -g 20000 group0022]
+
+groupdel NOME_GRUPO (Excluir grupo)
+
+newgrp NOME_GRUPO (Altera temporariamente o grupo primario de um usuário {É só fazer logout e login pra voltar ao normal})
