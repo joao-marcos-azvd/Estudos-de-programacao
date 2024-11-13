@@ -130,7 +130,7 @@ userdel -r nome_usuario (Remove um usuário de forma recursiva {Não deixa nada 
 
 usermod -opção (Modifica dados dos usuário)
 
-/etc/passwd (Caminho do diretório com informações dos usuários)
+/etc/passwd (Caminho do arquivo com informações dos usuários)
 
 /etc/group (Guarda informações de grupos de usuários)
 
