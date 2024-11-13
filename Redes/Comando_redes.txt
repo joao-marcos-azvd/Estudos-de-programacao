@@ -161,3 +161,5 @@ chage INFORMAÇÕES (Altera dados da senha do usuário)
 
 O comando define uma idade mínima (-m) de zero dias, uma idade máxima (-M) de 90 dias, um período de aviso (-W) de 7 dias e um período de inatividade (-I) de 14 dias.
 EX: chage -m 0 -M 90 -W 7 -I 14 sysadmin05
+
+/etc/shadow (Caminha para o arquivo com as senha dos usuários {Com criptografia})
