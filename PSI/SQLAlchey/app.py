@@ -1,3 +1,4 @@
+# ESSE CÓDIGO NÃO É MEU! É DE ARIANE!
 from flask import Flask, render_template, request, redirect, url_for, flash
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
