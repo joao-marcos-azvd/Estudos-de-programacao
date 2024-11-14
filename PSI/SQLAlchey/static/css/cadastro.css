@@ -1,0 +1,141 @@
+/* Configuração Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Título */
+h2 {
+    margin-bottom: 1rem;
+    color: #4CAF50;
+}
+
+/* Formulário padrão */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1rem;
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Botão de ação */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Link */
+a {
+    display: block;
+    margin-top: 1rem;
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Específicos para cada página */
+
+/* Cadastro */
+.cadastro-container h2 {
+    color: #4CAF50;
+}
+
+.cadastro-container button {
+    background-color: #4CAF50;
+}
+
+/* Login */
+.login-container h2 {
+    color: #2196F3;
+}
+
+.login-container button {
+    background-color: #2196F3;
+}
+
+.login-container button:hover {
+    background-color: #1976D2;
+}
+
+/* Lista de Usuários */
+.lista-usuarios-container h2 {
+    color: #FF9800;
+}
+
+.lista-usuarios-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lista-usuarios-container li {
+    background-color: #f9f9f9;
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* Mensagens de feedback */
+ul li {
+    color: #D8000C;
+    font-weight: bold;
+}
