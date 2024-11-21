@@ -57,3 +57,26 @@ having sum(vpr_quantProduto) > 20;
 -- Qual foi a média de valor gasto em cada mês?
 select ven_data, avg(ven_total) from tb_vendas 
 group by month(ven_data) 
+
+USE db_vendas;
+
+-- Quais clientes compraram produtos de categorias diferentes em suas compras?
+
+-------- 2 Parte --------
+-- Qual é o nome do cliente que realizou a compra mais cara?
+select cli_nome, ven_total from tb_clientes join tb_vendas
+on ven_cli_id = cli_id
+where ven_total = (select max(ven_total) from tb_vendas);
+
+-- Quais produtos nunca foram vendidos?
+select pro_nome, pro_id from tb_produtos
+where pro_id not in (select vpr_pro_id from tb_vendas_produtos);
+
+-- Quais clientes nunca realizaram uma compra?
+-- Qual é o nome e o e-mail do cliente que mais gastou em todas as suas compras?
+-- Quais produtos foram vendidos pelo menor preço em relação ao seu preço original?
+-- Qual é o segundo maior valor total de uma venda?
+-- Quais são os nomes dos clientes que compraram apenas uma vez?
+-- Quais categorias de produtos nunca foram vendidas?
+-- Qual foi o mês com o maior valor total de vendas em todo o histórico?
+-- Quais clientes compraram o produto mais caro vendido na loja?
