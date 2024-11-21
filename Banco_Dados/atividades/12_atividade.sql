@@ -73,6 +73,9 @@ select pro_nome, pro_id from tb_produtos
 where pro_id not in (select vpr_pro_id from tb_vendas_produtos);
 
 -- Quais clientes nunca realizaram uma compra?
+select cli_id from tb_clientes
+where cli_id not in (select ven_cli_id from tb_vendas);
+
 -- Qual é o nome e o e-mail do cliente que mais gastou em todas as suas compras?
 -- Quais produtos foram vendidos pelo menor preço em relação ao seu preço original?
 -- Qual é o segundo maior valor total de uma venda?
