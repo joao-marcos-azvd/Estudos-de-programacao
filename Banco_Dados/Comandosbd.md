@@ -99,15 +99,17 @@
 
 - JUNÇÃO DE INTERVALOS:
       
-      curdate() - interval 3 month - interval 15 day; 
+        curdate() - interval 3 month - interval 15 day; 
 
 - INTERLIGA DADOS DE TABELAS COM PELOMENOS UM DOS ELEMENTOS IGUAIS:
 
-      select pro_id, pro_nome, pro_cat_id, cat_nome, cat_id, cat_descricao from tb_produtos join tb_categorias on pro_cat_id = cat_id;
+        select pro_id, pro_nome, pro_cat_id, cat_nome, cat_id, cat_descricao from tb_produtos join tb_categorias
+        on pro_cat_id = cat_id;
 
 - INTERLIGA DADOS DE TABELAS COM PELOMENOS UM DOS ELEMENTOS IGUAIS COM FILTRO:
-      
-      select pro_id, pro_nome, pro_cat_id, cat_nome, cat_id, cat_descricao from tb_produtos join tb_categorias on pro_cat_id = cat_id where cat_nome = 'Eletrônicos';
+
+        select pro_id, pro_nome, pro_cat_id, cat_nome, cat_id, cat_descricao from tb_produtos join tb_categorias
+        on pro_cat_id = cat_id where cat_nome = 'Eletrônicos';
 
 - RENOMEIA O NOME DA COLUNA:
       
@@ -128,6 +130,6 @@
 - FAZ UM SUBCONSULTA (Uma consulta dentro de outra consulta):
   
         select pro_id, pro_preco from tb_produtos
-        where pro_preco in (select max(pro_preco) from tb_produtos);
+        where pro_preco = (select max(pro_preco) from tb_produtos);
 
 - LINK PARA VISUALIZAR FUNÇÕES: https://www.w3schools.com/sql/sql_ref_mysql.asp
