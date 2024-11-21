@@ -14,3 +14,46 @@ ON cat_id = pro_categoria_id
 JOIN tb_vendas_produtos
 ON pro_id = vpr_pro_id 
 GROUP BY cat_nome;
+
+-- Quais clientes realizaram mais de uma compra?
+select cli_nome,count(ven_cli_id) from tb_clientes join tb_vendas 
+on ven_cli_id = cli_id 
+group by cli_nome
+having count(ven_cli_id) > 1;
+
+
+-- Qual é a média de preço dos produtos vendidos em cada categoria?
+select cat_nome, avg(vpr_precoProduto) from tb_vendas_produtos join tb_produtos
+on  vpr_pro_id = pro_id 
+join tb_categorias 
+on pro_categoria_id = cat_id 
+group by cat_nome; 
+
+
+-- Quais categorias tiveram um total de vendas superior a um valor específico?
+select cat_nome, sum(ven_total) from tb_vendas join tb_vendas_produtos 
+on vpr_ven_id = ven_id 
+join tb_produtos 
+on vpr_pro_id = pro_id 
+join tb_categorias 
+on pro_categoria_id = cat_id 
+group by cat_nome
+having sum(ven_total) > 15;
+
+
+-- Qual é a data e o valor da compra mais cara de cada cliente?
+select cli_nome, ven_data, max(ven_total)from tb_clientes join tb_vendas
+on ven_cli_id = cli_id 
+group by cli_nome;
+
+
+-- Quais produtos têm uma quantidade total vendida superior a um valor específico?
+select pro_nome, sum(vpr_quantProduto) from tb_produtos join tb_vendas_produtos
+on vpr_pro_id = pro_id
+group by pro_nome 
+having sum(vpr_quantProduto) > 20;  
+
+
+-- Qual foi a média de valor gasto em cada mês?
+select ven_data, avg(ven_total) from tb_vendas 
+group by month(ven_data) 
