@@ -121,7 +121,7 @@
       
       select ven_data, sum(ven_total) from tb_vendas group by ven_data;
 
-- FAZ UM FILTRO NA TABELA APOS O AGRUPAMENTO:
+- FAZ UM FILTRO NA TABELA APOS O AGRUPAMENTO (SÓ PODE SER USADO DEPOIS DO "group by":
 
       select sum(valor) from tb_vendas where cli_nome like "a%" group by cli_nome having sum(valor) > 15;
 
