@@ -126,6 +126,7 @@
       select sum(valor) from tb_vendas where cli_nome like "a%" group by cli_nome having sum(valor) > 15;
 
 - FAZ UM SUBCONSULTA (Uma consulta dentro de outra consulta):
+  
         select pro_id, pro_preco from tb_produtos
         where pro_preco in (select max(pro_preco) from tb_produtos);
 
