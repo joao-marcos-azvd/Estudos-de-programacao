@@ -165,3 +165,6 @@ EX: chage -m 0 -M 90 -W 7 -I 14 NOME_USER
 /etc/shadow (Caminha para o arquivo com as senha dos usuários {Com criptografia})
 
 su - NOME_USUÁRIO (Mude de usuário, contanto que saiba a senha {RedHat})
+
+COMENTAR:
+  
