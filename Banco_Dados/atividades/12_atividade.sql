@@ -58,8 +58,6 @@ having sum(vpr_quantProduto) > 20;
 select ven_data, avg(ven_total) from tb_vendas 
 group by month(ven_data) 
 
-USE db_vendas;
-
 -- Quais clientes compraram produtos de categorias diferentes em suas compras?
 
 -------- 2 Parte --------
