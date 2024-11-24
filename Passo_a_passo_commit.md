@@ -17,5 +17,3 @@
 ---
 # Como dar pull via terminal git?
     git pull
-
-    Teste

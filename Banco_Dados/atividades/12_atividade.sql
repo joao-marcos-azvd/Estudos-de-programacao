@@ -56,11 +56,7 @@ having sum(vpr_quantProduto) > 20;
 
 -- Qual foi a média de valor gasto em cada mês?
 select ven_data, avg(ven_total) from tb_vendas 
-<<<<<<< HEAD
 group by month(ven_data);
-=======
-group by month(ven_data) 
->>>>>>> 8292c7cee3787c44be167b244a0f0f46ccea8148
 
 -- Quais clientes compraram produtos de categorias diferentes em suas compras?
 
