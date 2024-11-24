@@ -56,9 +56,7 @@ having sum(vpr_quantProduto) > 20;
 
 -- Qual foi a média de valor gasto em cada mês?
 select ven_data, avg(ven_total) from tb_vendas 
-group by month(ven_data) 
-
-USE db_vendas;
+group by month(ven_data);
 
 -- Quais clientes compraram produtos de categorias diferentes em suas compras?
 
@@ -77,9 +75,47 @@ select cli_id from tb_clientes
 where cli_id not in (select ven_cli_id from tb_vendas);
 
 -- Qual é o nome e o e-mail do cliente que mais gastou em todas as suas compras?
+select cli_nome, cli_email, sum(ven_total) as valor_max from tb_clientes join tb_vendas
+on cli_id = ven_cli_id 
+group by ven_cli_id
+order by valor_max desc
+limit 1;
+
 -- Quais produtos foram vendidos pelo menor preço em relação ao seu preço original?
+select pro_id, vpr_pro_id, pro_nome, pro_preco, vpr_precoproduto
+from tb_produtos join tb_vendas_produtos
+on pro_id = vpr_pro_id
+where vpr_precoproduto < pro_preco;
+
 -- Qual é o segundo maior valor total de uma venda?
+select ven_total as valor from tb_vendas
+where ven_total < (select max(ven_total) from tb_vendas)
+group by ven_id
+order by ven_total desc
+limit 1;
+
 -- Quais são os nomes dos clientes que compraram apenas uma vez?
+select cli_nome, cli_id, count(ven_cli_id) as num_cli from tb_clientes join tb_vendas
+on cli_id = ven_cli_id
+group by ven_cli_id
+having num_cli = 1;
+
 -- Quais categorias de produtos nunca foram vendidas?
+select cat_nome,  cat_id from tb_categorias
+where cat_id not in (select cat_id from tb_categorias join tb_produtos
+on cat_id = pro_categoria_id
+join tb_vendas_produtos
+on vpr_pro_id = pro_id);
+
 -- Qual foi o mês com o maior valor total de vendas em todo o histórico?
+select month(ven_data), sum(ven_total) from tb_vendas
+group by month(ven_data);
+
 -- Quais clientes compraram o produto mais caro vendido na loja?
+select cli_nome, vpr_pro_id from tb_clientes join tb_vendas 
+on cli_id = ven_cli_id 
+join tb_vendas_produtos
+on ven_id = vpr_ven_id 
+join tb_produtos 
+on pro_id = vpr_pro_id
+where pro_preco = (select max(pro_preco) from tb_produtos);
