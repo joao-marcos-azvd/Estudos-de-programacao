@@ -59,7 +59,6 @@ select ven_data, avg(ven_total) from tb_vendas
 group by month(ven_data);
 
 -- Quais clientes compraram produtos de categorias diferentes em suas compras?
-
 -------- 2 Parte --------
 -- Qual é o nome do cliente que realizou a compra mais cara?
 select cli_nome, ven_total from tb_clientes join tb_vendas
