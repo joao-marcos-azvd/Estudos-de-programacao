@@ -133,3 +133,10 @@
         where pro_preco = (select max(pro_preco) from tb_produtos);
 
 - LINK PARA VISUALIZAR FUNÇÕES: https://www.w3schools.com/sql/sql_ref_mysql.asp
+
+- CRIANDO FUNÇÕES:
+  
+      create function 
+      fn_soma (a int, b int)
+      returns int
+      return a+b;
