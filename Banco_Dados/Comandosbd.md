@@ -132,11 +132,25 @@
         select pro_id, pro_preco from tb_produtos
         where pro_preco = (select max(pro_preco) from tb_produtos);
 
-- LINK PARA VISUALIZAR FUNÇÕES: https://www.w3schools.com/sql/sql_ref_mysql.asp
+- LINK PARA VISUALIZAR FUNÇÕES DE AGREGAÇÃO: https://www.w3schools.com/sql/sql_ref_mysql.asp
 
-- CRIANDO FUNÇÕES:
+- CRIANDO FUNÇÕES EM UMA LINHA:
   
       create function 
       fn_soma (a int, b int)
       returns int
       return a+b;
+
+- CRIANDO FNÇÕES EM VÁRIAS LINHAS:
+
+      delimiter //
+      create function fn_some(a int)
+      returns int
+      begin
+      set @variavel_1=4;
+      set @variavel_2=3;
+      set @variavel_3=9;
+      set @variavel_4= @variavel_1 + @variavel_2 + @variavel_3;
+      return @varriavel_4;
+      end //
+      delimiter ;
