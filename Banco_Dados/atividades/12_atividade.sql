@@ -107,7 +107,8 @@ join tb_vendas_produtos
 on vpr_pro_id = pro_id);
 
 -- Qual foi o mês com o maior valor total de vendas em todo o histórico?
-select month(ven_data), sum(ven_total) from tb_vendas
+select month(ven_data), max(ven_total) from tb_vendas
+where ven_total = (select max(ven_total) from tb_vendas)
 group by month(ven_data);
 
 -- Quais clientes compraram o produto mais caro vendido na loja?
