@@ -1,7 +1,7 @@
 # Proxy Reverso
 
 ## O que é o proxy reverso? 
-- O proxy reverso é um intermediário entre cliente e um ou mais servidores web, que recebe as solicitações do cliente e envia para o servidor. Ele também pode retornar uma resposta do servidor para a solicitação do cliente. Ele é chgamado de "reverso" por fazer o trabalho contrário do proxy, onde a solicitação sai do cliente para a internet.
+O proxy reverso é um intermediário entre cliente e um ou mais servidores web, que recebe as solicitações do cliente e envia para o servidor. Ele também pode retornar uma resposta do servidor para a solicitação do cliente. Ele é chgamado de "reverso" por fazer o trabalho contrário do proxy, onde a solicitação sai do cliente para a internet.
 
 ## Quias as suas funcionalidades?
 - Proteger o servidor
