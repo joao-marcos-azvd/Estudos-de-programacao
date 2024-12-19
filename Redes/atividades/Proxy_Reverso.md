@@ -46,12 +46,17 @@ server {
 ~~~~  
 Substitua **IP_DO_SERVIDOR_DESTINO** pelo endereço IP do servidor ou pelo hostname para onde deseja encaminhar as requisições.
 
-### Passo 3 - Teste de configuração:
+### Passo 3 - Ativar configurações:
+1. Crie um link simbólico para ativar o site.
+
+        sudo ln -s /etc/nginx/sites-available/proxy_reverso /etc/nginx/sites-enabled/
+
+### Passo 4 - Teste de configuração:
 1. Garanata que não há erro de sintaxe nas configurações do nginx.
 
         sudo nginx -t
 
-### Passo 4 - Salvar as alterações:
+### Passo 5 - Salvar as alterações:
 1. Recarregue o arquivo de configuração para que as alterações sejam efetuadas.
 
         sudo systemctl reload nginx
