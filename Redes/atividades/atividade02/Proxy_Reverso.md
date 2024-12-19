@@ -61,6 +61,10 @@ Substitua **IP_DO_SERVIDOR_DESTINO** pelo endereço IP do servidor ou pelo hostn
 
         sudo systemctl reload nginx
 
+# Autores 
+João Marcos de Azevedo Dantas  
+Ruan Allyson de Araújo Felix
+
 # Referencias
 KingHost, R. (2024, dezembro 7). Proxy Reverso — O Que É, Como Funciona E Quais São Suas Vantagens? KingHost. https://king.host/blog/tutoriais/proxy-reverso-o-que-e-e-como-usar/  
 
