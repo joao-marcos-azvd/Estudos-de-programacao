@@ -107,8 +107,8 @@ Adicione a seguinte linha:
 
         nameserver SEU_IP_PRIVADO 
 
-### Passo 5 - Testar a Configuração:
-Use o comando dig ou nslookup para verificar se o DNS está funcionando corretamente.
+### Passo 5 - Testar a Configuração:   
+1. Use o comando dig ou nslookup para verificar se o DNS está funcionando corretamente.
 
         dig @SEU_IP_PRIVADO meudominio.local
 
