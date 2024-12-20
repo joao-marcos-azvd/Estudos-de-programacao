@@ -37,7 +37,7 @@ A resolução de nomes converte nomes de sistemas no seu endereço IP e vice-ver
 _O arquivo principal de configuração do BIND é o /etc/bind/named.conf.options_
 
         sudo nano /etc/bind/named.conf.options   
-    Adicione ou modifique as seguintes linhas:.
+    Adicione ou modifique as seguintes linhas:
 
         options {
             directory "/var/cache/bind";
