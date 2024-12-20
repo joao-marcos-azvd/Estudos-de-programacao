@@ -1,16 +1,16 @@
 # Proxy Reverso
 
-## O que é o proxy reverso? 
-O proxy reverso é um intermediário entre cliente e um ou mais servidores web, que recebe as solicitações do cliente e envia para o servidor. Ele também pode retornar uma resposta do servidor para a solicitação do cliente. Ele é chgamado de "reverso" por fazer o trabalho contrário do proxy, onde a solicitação sai do cliente para a internet.
+## O que é o proxy reverso?
+O proxy reverso é um intermediário entre cliente e um ou mais servidores web, que recebe as solicitações do cliente e envia para o servidor. Ele também pode retornar uma resposta do servidor para a solicitação do cliente. Ele é chamado de "reverso" por fazer o trabalho contrário do proxy, onde a solicitação sai do cliente para a internet.
 
-## Quias as suas funcionalidades?
+## Quais as suas funcionalidades?
 - Proteger o servidor
 - Balanceamento de Carga
 - Compressão de Dados
 - Controle de Acesso
 - Monitoramento e Logs  
 
-Em resumo, O proxy reverso oferece uma série de benefícios essenciais para melhorar a escalabilidade, segurança e desempenho de sistemas distribuídos. 
+Em resumo, o proxy reverso oferece uma série de benefícios essenciais para melhorar a escalabilidade, segurança e desempenho de sistemas distribuídos.
 
 ## Como implementar?  
 Para a nossa implementação vamos utilizar o proxy reverso **Nginx**.
@@ -25,26 +25,25 @@ Para a nossa implementação vamos utilizar o proxy reverso **Nginx**.
         sudo apt install nginx  
 
 ### Passo 2 - Configuração do Proxy Reverso:
-1. Crie ou edite o arquivo de configuração para o seu proxy reverso.   
+1. Crie ou edite o arquivo de configuração para o seu proxy reverso.  
 
         sudo nano /etc/nginx/sites-available/nome_arquivo.conf
 
-2. Adicione o seguinte conteudo dentro arquivo.conf.
-~~~~
-server {
-    listen 80;
-    server_name seu_dominio.com;
+2. Adicione o seguinte conteúdo dentro do arquivo.conf.
 
-    location / {
-        proxy_pass http://IP_DO_SERVIDOR_DESTINO;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-}
-~~~~  
-Substitua **IP_DO_SERVIDOR_DESTINO** pelo endereço IP do servidor ou pelo hostname para onde deseja encaminhar as requisições.
+        server {
+                listen 80;
+                server_name seu_dominio.com;
+
+                location / {
+                        proxy_pass http://IP_DO_SERVIDOR_DESTINO;
+                        proxy_set_header Host $host;
+                        proxy_set_header X-Real-IP $remote_addr;
+                        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                        proxy_set_header X-Forwarded-Proto $scheme;
+                }
+        }
+   Substitua **IP_DO_SERVIDOR_DESTINO** pelo endereço IP do servidor ou pelo hostname para onde deseja encaminhar as requisições.
 
 ### Passo 3 - Ativar configurações:
 1. Crie um link simbólico para ativar o site.
@@ -52,7 +51,7 @@ Substitua **IP_DO_SERVIDOR_DESTINO** pelo endereço IP do servidor ou pelo hostn
         sudo ln -s /etc/nginx/sites-available/proxy_reverso /etc/nginx/sites-enabled/
 
 ### Passo 4 - Teste de configuração:
-1. Garanata que não há erro de sintaxe nas configurações do nginx.
+1. Garanta que não há erro de sintaxe nas configurações do nginx.
 
         sudo nginx -t
 
@@ -61,7 +60,7 @@ Substitua **IP_DO_SERVIDOR_DESTINO** pelo endereço IP do servidor ou pelo hostn
 
         sudo systemctl reload nginx
 
-# Autores 
+# Autores
 João Marcos de Azevedo Dantas  
 Ruan Allyson de Araújo Felix
 

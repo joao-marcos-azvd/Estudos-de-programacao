@@ -18,25 +18,25 @@ O DNS não é nada mais que um sistema de tradução de IP, que permite que os u
 O DNS local é uma forma de implementação do sistema DNS dentro de uma rede específica, onde é utilizado em uma rede interna. Ele permite que dispositivos na rede resolvam nomes de domínio locais, como um servidor local ou sem a necessidade de consultar servidores DNS externos. Sendo útil em ambientes corporativos ou confinados onde as máquinas precisam se comunicar entre si.
 
 ## Aplicação de um DNS local
-Para a nossa aplicação vamos installar um software de DNS. O software que iremops utilizar é o **BIND**.  
+Para a nossa aplicação vamos instalar um software de DNS. O software que iremos utilizar é o **BIND**.  
 
 ### Passo 1 - Instalação do BIND:
 1. Atualize o sistema.
 
-        sudo apt update 
+        sudo apt update
         sudo apt upgrade
 
 2. Use o gerenciador de arquivos da sua máquina para instalar o BIND.
 
-        sudo apt install bind9 bind9utils bind9-doc 
+        sudo apt install bind9 bind9utils bind9-doc
 
 ### Passo 2 - Configurar o BIND:
 A resolução de nomes converte nomes de sistemas no seu endereço IP e vice-versa. Assim, a configuração consiste, basicamente na criação de 2 zonas, uma (zone “home.lan”) que converte nomes em endereços IP e outra (zone “1.168.192.in-addr.arpa”) que converte endereços IP no respectivo nome de sistema. (3.1.3 Servidor DNS Local, [s.d.])  
 
-1. Edite o arquivo de configuração principal.   
+1. Edite o arquivo de configuração principal.  
 _O arquivo principal de configuração do BIND é o /etc/bind/named.conf.options_
 
-        sudo nano /etc/bind/named.conf.options   
+        sudo nano /etc/bind/named.conf.options  
     Adicione ou modifique as seguintes linhas:
 
         options {
@@ -54,7 +54,7 @@ _O arquivo principal de configuração do BIND é o /etc/bind/named.conf.options
 
         sudo nano /etc/bind/named.conf.local
 
-    Adicione o seguinte conteúdo. 
+    Adicione o seguinte conteúdo.
 
         zone "meudominio.local" {
             type master;
@@ -65,9 +65,9 @@ _O arquivo principal de configuração do BIND é o /etc/bind/named.conf.options
 Copie o arquivo anterior para criar sua nova zona.
 
         sudo cp /etc/bind/db.local /etc/bind/db.meudominio.local
-    
+   
     Edite o arquivo.
-        
+       
         sudo nano /etc/bind/db.meudominio.local
 
     Modifique as entradas conforme necessário.
@@ -97,17 +97,17 @@ Copie o arquivo anterior para criar sua nova zona.
 
         sudo named-checkzone meudominio.local /etc/bind/db.meudominio.local
 
-2. Reinicie o BIND. 
-        
+2. Reinicie o BIND.
+       
         sudo systemctl restart bind9
 
 ### Passo 4 - Configurar o Cliente para Usar o DNS Local:
-1. Edite o arquivo /etc/resolv.conf.   
+1. Edite o arquivo /etc/resolv.conf.  
 Adicione a seguinte linha:
 
-        nameserver SEU_IP_PRIVADO 
+        nameserver SEU_IP_PRIVADO
 
-### Passo 5 - Testar a Configuração:   
+### Passo 5 - Testar a Configuração:  
 1. Use o comando dig ou nslookup para verificar se o DNS está funcionando corretamente.
 
         dig @SEU_IP_PRIVADO meudominio.local
@@ -117,7 +117,7 @@ Adicione a seguinte linha:
 
 - Essa configuração é básica e pode ser expandida conforme suas necessidades, incluindo a configuração de registros adicionais e segurança.
 
-# Autores 
+# Autores
 João Marcos de Azevedo Dantas  
 Ruan Allyson de Araújo Felix
 
