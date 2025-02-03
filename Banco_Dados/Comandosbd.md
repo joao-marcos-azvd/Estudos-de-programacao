@@ -155,18 +155,18 @@
       end //
       delimiter ;
 
-  - CRIANDO UM PROCEDIUMENTO NO SQL:
+- CRIANDO UM PROCEDIUMENTO NO SQL:
 
-            DELIMITER //
-            CREATE PROCEDURE verificar_idade(IN idade INT, OUT resultado VARCHAR(20))
-            BEGIN
-                IF idade >= 18 THEN
-                    SET resultado = 'Maior de idade';
-                ELSE
-                    SET resultado = 'Menor de idade';
-                END IF;
-            END //
-            DELIMITER ;
-            
-            CALL verificar_idade(25, @resu);
-            select @resu;
+      DELIMITER //
+      CREATE PROCEDURE verificar_idade(IN idade INT, OUT resultado VARCHAR(20))
+      BEGIN
+          IF idade >= 18 THEN
+              SET resultado = 'Maior de idade';
+          ELSE
+              SET resultado = 'Menor de idade';
+          END IF;
+      END //
+      DELIMITER ;
+      
+      CALL verificar_idade(25, @resu);
+      select @resu;
