@@ -160,21 +160,22 @@
       DELIMITER //
       CREATE PROCEDURE verificar_idade(IN idade INT, OUT resultado VARCHAR(20))
       BEGIN
-          IF idade >= 18 THEN
-              SET resultado = 'Maior de idade';
-          ELSE
-              SET resultado = 'Menor de idade';
-          END IF;
+      IF idade >= 18 THEN
+            SET resultado = 'Maior de idade';
+      ELSE
+            SET resultado = 'Menor de idade';
+      END IF;
       END //
       DELIMITER ;
-      
+
       CALL verificar_idade(25, @resu);
       select @resu;
 
-  
-      *Comando*                       |    *Descrição*
-      CREATE PROCEDURE nome_proc()	  |    Cria um procedimento
-      IN	                          |    Parâmetro de entrada
-      OUT	                          |    Parâmetro de saída
-      INOUT	                          |    Parâmetro de entrada e saída
-      CALL nome_proc()	              |    Executa o procedimento
+      _________________________________________________________________
+      *Comando*                       |    *Descrição*              
+      CREATE PROCEDURE nome_proc()	|    Cria um procedimento       
+      IN	                            |    Parâmetro de entrada       
+      OUT	                            |    Parâmetro de saída
+      INOUT	                        |    Parâmetro de entrada e saída
+      CALL nome_proc()	            |    Executa o procedimento
+      _________________________________________________________________
