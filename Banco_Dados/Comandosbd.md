@@ -172,10 +172,10 @@
       select @resu;
 
       _________________________________________________________________
-      *Comando*                           |    *Descrição*              
+      *Comando*                     |    *Descrição*              
       CREATE PROCEDURE nome_proc()	|    Cria um procedimento       
       IN	                        |    Parâmetro de entrada       
       OUT	                        |    Parâmetro de saída
       INOUT	                        |    Parâmetro de entrada e saída
-      CALL nome_proc()	           |    Executa o procedimento
+      CALL nome_proc()	         |    Executa o procedimento
       _________________________________________________________________
