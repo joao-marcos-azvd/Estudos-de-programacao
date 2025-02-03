@@ -141,7 +141,7 @@
       returns int
       return a+b;
 
-- CRIANDO FNÇÕES EM VÁRIAS LINHAS:
+- CRIANDO FUNÇÕES EM VÁRIAS LINHAS:
 
       delimiter //
       create function fn_some(a int)
@@ -154,3 +154,19 @@
       return @varriavel_4;
       end //
       delimiter ;
+
+  - CRIANDO UM PROCEDIUMENTO NO SQL:
+
+            DELIMITER //
+            CREATE PROCEDURE verificar_idade(IN idade INT, OUT resultado VARCHAR(20))
+            BEGIN
+                IF idade >= 18 THEN
+                    SET resultado = 'Maior de idade';
+                ELSE
+                    SET resultado = 'Menor de idade';
+                END IF;
+            END //
+            DELIMITER ;
+            
+            CALL verificar_idade(25, @resu);
+            select @resu;
