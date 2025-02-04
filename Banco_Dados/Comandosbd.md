@@ -171,9 +171,9 @@
       CALL verificar_idade(25, @resu);
       select @resu;
 
-*Comando*                        *Descrição*              
-CREATE PROCEDURE nome_proc()      Cria um procedimento       
-IN                                Parâmetro de entrada       
-OUT	                            Parâmetro de saída
-INOUT	                            Parâmetro de entrada e saída
-CALL nome_proc()	                Executa o procedimento
+      *Comando*                        *Descrição*              
+      CREATE PROCEDURE nome_proc()      Cria um procedimento       
+      IN                                Parâmetro de entrada       
+      OUT	                            Parâmetro de saída
+      INOUT	                            Parâmetro de entrada e saída
+      CALL nome_proc()	                Executa o procedimento
