@@ -53,3 +53,24 @@ DELIMITER ;
 
 CALL verificar_idade(25, @resu);
 select @resu;
+
+
+drop procedure lancar_notas;
+-- Questão feita em sala
+-- Esse bicho não tá prestando!
+delimiter $
+CREATE PROCEDURE lancar_notas 
+(id_aluno INT, nota1 FLOAT, nota2 FLOAT, nota3 FLOAT, nota4 FLOAT, OUT situacao_aluno VARCHAR(50))
+BEGIN
+	UPDATE tb_notas
+    SET not_nota1 = nota1, 
+		not_nota2 = nota2, 
+		not_nota3 = nota3, 
+        not_nota4 = nota4
+    WHERE id_aluno = not_alu_id;
+    SET situacao_aluno = fn_situacao(fn_mediaPonderada(nota1, nota2, nota3, nota4));
+END $
+delimiter ;
+
+call lancar_notas(2, 6, 5, 7, 8, @var);
+select @var;
