@@ -6,3 +6,4 @@
 
 ## Refresh
 * É um parametro passado para indicar o "envelhecimento"
+https://www-sciencedirect-com.translate.goog/topics/computer-science/refresh-interval?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc#definition
