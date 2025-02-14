@@ -170,10 +170,24 @@
 
       CALL verificar_idade(25, @resu);
       select @resu;
-
+  
       *Comando* --> *Descrição*              
       CREATE PROCEDURE nome_proc() --> Cria um procedimento       
       IN --> Parâmetro de entrada       
       OUT --> Parâmetro de saída
       INOUT --> Parâmetro de entrada e saída
       CALL nome_proc() --> Executa o procedimento
+
+- CRIANDO UM GATILHO NO SQL:
+  
+      DELIMITER //
+
+      CREATE TRIGGER after_update_notas 
+      AFTER UPDATE ON tb_notas
+      FOR EACH ROW
+      BEGIN
+          INSERT INTO historico_notas (id_aluno, nota1, nota2, nota3, nota4)
+          VALUES (NEW.not_alu_id, NEW.not_nota1, NEW.not_nota2, NEW.not_nota3, NEW.not_nota4);
+      END //
+      
+      DELIMITER ;
