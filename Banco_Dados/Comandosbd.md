@@ -191,3 +191,8 @@
       END //
       
       DELIMITER ;
+
+      EXPLICAÇÃO:
+      AFTER UPDATE → O gatilho será executado após a execução de um UPDATE na tabela tb_notas.
+      FOR EACH ROW → O gatilho é disparado para cada linha que for atualizada.
+      NEW → Referência aos novos valores dos campos após o UPDATE.
